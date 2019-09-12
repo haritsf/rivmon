@@ -6,10 +6,8 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 }
 ?>
 <!DOCTYPE html>
-<!-- Content Wrapper. Contains page content -->
 <?php include("../pages/header.php"); ?>
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
       About
@@ -108,5 +106,4 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 
   </section>
 </div>
-<!-- /.content-wrapper -->
 <?php include("../pages/footer.php"); ?>

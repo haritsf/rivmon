@@ -6,11 +6,9 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
 }
 ?>
 <!DOCTYPE html>
-<!-- Content Wrapper. Contains page content -->
 <meta http-equiv="refresh" content="60">
 <?php include("../pages/header.php"); ?>
 <div class="content-wrapper">
-  <!-- Content Header (Page header) -->
   <section class="content-header">
     <h1>
       Dashboard
@@ -35,7 +33,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
               <h3>
                 <?php
                 include_once("koneksi.php");
-                // Print out result
                 foreach ($koneksi->query('SELECT COUNT(*) FROM logsensor') as $row) {
                   echo $row['COUNT(*)'];
                 }
@@ -52,7 +49,6 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
               <h3>
                 <?php
                 include_once("koneksi.php");
-                // Print out result
                 foreach ($koneksi->query('SELECT COUNT(*) FROM devicedata') as $row) {
                   echo $row['COUNT(*)'];
                 }
@@ -84,5 +80,4 @@ if (empty($_SESSION['username']) and empty($_SESSION['password'])) {
     </div>
   </section>
 </div>
-<!-- /.content-wrapper -->
 <?php include("../pages/footer.php"); ?>
